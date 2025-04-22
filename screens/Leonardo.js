@@ -27,9 +27,6 @@ const styles = StyleSheet.create({
         backgroundColor: "blue",
         padding: 20,
         color: "#fff",
-        borderRadius: 10,
-        margin: 10,
-        borderWidth: 2,
         borderColor: "red",
         shadowColor: "#000",
         shadowOffset: {
@@ -84,9 +81,66 @@ const styles = StyleSheet.create({
         textShadowRadius: 5,
     },
 
-    buttonTextDecoration: {
-        textDecorationLine: "underline",
-        textDecorationStyle: "dotted",
-        textDecorationColor: "#fff",
+    buttonHover: {
+        backgroundColor: "#0056b3",
+        borderColor: "#007BFF",
+        borderWidth: 1,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        elevation: 5,
+        transform: [{ scale: 1.05 }],
     },
+
+    buttonTextHover: {
+        color: "#fff",
+        fontSize: 16,
+        fontWeight: "bold",
+        textAlign: "center",
+        textShadowColor: "#000",
+        textShadowOffset: { width: 1, height: 1 },
+        textShadowRadius: 5,
+    },
+
+    buttonTextHoverShadow: {
+        textShadowColor: "#000",
+        textShadowOffset: { width: 1, height: 1 },
+        textShadowRadius: 5,
+    },
+
+    buttonTextHoverEffect: {
+        textShadowColor: "#000",
+        textShadowOffset: { width: 1, height: 1 },
+        textShadowRadius: 5,
+    },
+
+    buttonTextHoverEffectShadow: {
+        textShadowColor: "#000",
+        textShadowOffset: { width: 1, height: 1 },
+        textShadowRadius: 5,
+    },
+
+    buttonTextHoverEffectShadow: {
+        textShadowColor: "#000",
+        textShadowOffset: { width: 1, height: 1 },
+        textShadowRadius: 5,
+    },
+
+    buttonTextHoverEffectShadow: {
+        textShadowColor: "#000",
+        textShadowOffset: { width: 1, height: 1 },
+        textShadowRadius: 5,
+    },
+
+    buttonTextHoverEffectShadow: {
+        textShadowColor: "#000",
+        textShadowOffset: { width: 1, height: 1 },
+        textShadowRadius: 5,
+    },
+
+    
 })

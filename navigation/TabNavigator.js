@@ -1,52 +1,65 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import HomeScreen from "../screens/Leonardo";
+import { Ionicons } from "@expo/vector-icons";
+import LeonardoNavigator from "./LeonardoNavigator";
+import OliveiraNavigator from "./OliveiraNavigator";
+
 
 const Tab = createBottomTabNavigator();
 
 export default function TabNavigator() {
-    return (
-        <Tab.Navigator
-        initialRouteName="HomeScreen"
-        screenOptions={{
-            headerShown: true,
-            headerTitle: "Página Inicial",
-            headerStyle: {
-                backgroundColor: "#f4511e",
-                height: 100,
-            },
-            headerTintColor: "white",
-            headerTitleStyle: {
-                fontWeight: "bold",
-                fontSize: 24,
-            },
-            tabBarShowLabel: true,
-            tabBarStyle: {
-                backgroundColor: "#f4511e",
-                height: 60,
-                borderRadius: 50,
-                position: "absolute",
-                margin: 15,
-            },
-            tabBarLabelStyle: {
-                fontSize: 16,
-                fontWeight: "bold",
-            },
-            tabBarIconStyle: {
-                margin: 15,
-                marginBottom: 5,
-                color: "white",
-                fontSize: 24,
-            },
-            tabBarActiveTintColor: "red",
-            tabBarInactiveTintColor: "black",
-        }}>
-            <Tab.Screen name="Home" component={HomeScreen} 
-            options={{
-                TabBarIcon: ({ color, size }) => (
-                    <Ionicons name="home" color={color} size={size} />
-                ),
-            }}/>
-        </Tab.Navigator>
-    )
+  return (
+    <Tab.Navigator
+      initialRouteName="Home"
+      screenOptions={{
+        headerShown: true,
+        headerTitle: "memes",
+        headerStyle: {
+          backgroundColor: "black",
+          height: 100,
+        },
+        headerTintColor: "white",
+        headerTitleStyle: {
+          fontSize: 30,
+        },
+        tabBarShowLabel: true,
+        tabBarStyle: {
+          backgroundColor: "rgba(255, 255, 255, 0.5)",
+          borderRadius: 50,
+          height: 100,
+          position: "absolute",
+          margin: 15,
+        },
+        tabBarLabelStyle: {
+          fontSize: 20,
+        },
+        tabBarIconStyle: {
+          marginTop: 15,
+          marginBottom: 5,
+        },
+        tabBarActiveTintColor: "red",
+        tabBarInactiveTintColor: "black",
+      }}
+    >
+      <Tab.Screen
+        name="Home"
+        component={LeonardoNavigator}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="rocket" color={color} size={size} />
+          ),
+        }}
+      />
+
+      <Tab.Screen
+        name="Once ..."
+        component={OliveiraNavigator}
+        options={{
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="dice" color={color} size={size} />
+          ),
+        }}
+      />
+    </Tab.Navigator>
+  );
 }
