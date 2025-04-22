@@ -1,6 +1,7 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import { HoverEffect } from "react-native-gesture-handler";
 
 export default function Leonardo() {
     const navigation = useNavigation();
@@ -23,20 +24,69 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "#f0f0f0",
+        backgroundColor: "blue",
+        padding: 20,
+        color: "#fff",
+        borderRadius: 10,
+        margin: 10,
+        borderWidth: 2,
+        borderColor: "red",
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
     },
     title: {
         fontSize: 24,
         fontWeight: "bold",
         marginBottom: 20,
+        color: "#fff",
+        textAlign: "center",
+        textTransform: "uppercase",
+        letterSpacing: 2,
+        textShadowColor: "#000",
+        textShadowOffset: { width: 1, height: 1 },
+        textShadowRadius: 5,
+        textDecorationLine: "underline",
+        textDecorationStyle: "dotted",
+        textDecorationColor: "#fff",
+        textAlignVertical: "center",
     },
     button: {
         backgroundColor: "#007BFF",
         padding: 10,
         borderRadius: 5,
+        borderWidth: 1,
+        borderColor: "#0056b3",
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        elevation: 5
     },
+
     buttonText: {
         color: "#fff",
         fontSize: 16,
+        fontWeight: "bold",
+        textAlign: "center",
+    },
+
+    buttonTextShadow: {
+        textShadowColor: "#000",
+        textShadowOffset: { width: 1, height: 1 },
+        textShadowRadius: 5,
+    },
+
+    buttonTextDecoration: {
+        textDecorationLine: "underline",
+        textDecorationStyle: "dotted",
+        textDecorationColor: "#fff",
     },
 })
